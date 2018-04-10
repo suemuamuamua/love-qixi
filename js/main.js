@@ -197,7 +197,8 @@ function playMusic() {
 	},25000)
 }
 
-$("document").ready(function(){
+window.onload = function(){
+//document.ready是在文档结构加载完成后执行，window.onload则是在所有资源加载之后执行（包括图片）
 	playMusic()
 	//第一屏
 	boyWalk();
@@ -228,6 +229,6 @@ $("document").ready(function(){
 		snow()
 		$('.slogan').addClass('in')
 	},25000)
-})
+}
 
 
