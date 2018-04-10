@@ -1,0 +1,475 @@
+@font-face{
+	font-family: NextRustExtras;
+	src: url('./font/NexaRustHandmade-Extended.otf');
+}
+html,body {
+	width: 100%;
+	height: 100%;
+	font-family: 'NextRustExtras';
+	min-height: 640px;
+	background-color: pink;
+}
+body,
+div,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#content {
+	width: 1300px;
+	height: 640px;
+	position: absolute;
+	overflow: hidden;
+	top: calc(100%-640px)/2;
+	background-color: #eee;
+}
+.content-wrap {
+	width: 300%;
+	height: 640px;
+	position: relative;
+	left: 0;
+}
+.content-wrap>li {
+	float: left;
+	width: 33.33%;
+	height: 640px;
+	position: relative;
+
+}
+
+/******************pageA*********/
+
+/* 背景 */
+.a-bg {
+	width: 100%;
+	height: 100%;
+	background: url('../images/QixiA.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	position: relative;
+}
+/**cloud***/
+.cloud {
+	 position: absolute;
+	 z-index: 2;
+}
+.cloud1 {
+	width: 20%;
+	height: 10%;
+	left: -5%;
+	top: 15%;
+	background: url('../images/cloud1.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	-webkit-animation: smallCloud 30s linear infinite;
+	   		animation: smallCloud 30s linear infinite;
+}
+@-webkit-keyframes smallCloud {
+	0% {}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes smallCloud {
+	0% {}
+	100% {
+		left: 100%;
+	}
+}
+.cloud2 {
+	width: 30%;
+	height: 15%;
+	right: -5%;
+	top: 0;
+	background: url('../images/cloud2.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	-webkit-animation: bigCloud 60s linear infinite;
+					animation: bigCloud 60s linear infinite;
+}
+@-webkit-keyframes bigCloud {
+	0% {}
+	100% {
+		right: 100%;
+	}
+}
+@keyframes bigCloud {
+	0% {}
+	100% {
+		right: 100%;
+	}
+}
+/**sun**/
+.sun {
+	width: 201px;
+	height: 201px;
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	background: url('../images/sun.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	-webkit-animation: sunSet 30s linear infinite;
+					animation: sunSet 30s linear infinite;
+}
+@-webkit-keyframes sunSet {
+	0%{}
+	100%{
+		top: 30%;
+		left: -200%;
+	}
+}
+@keyframes sunSet {
+	0%{}
+	100%{
+		top: 30%;
+		left: -200%;
+	}
+}
+
+/* 小男孩 */
+.charector {
+	width: 151px;
+	height: 291px;
+	background: url('../images/boy.png') no-repeat 0 -291px;
+	overflow: hidden;
+	position: absolute;
+	left: 6%;
+	top: 36%;
+}
+.slowWalk {
+	-webkit-animation: person-slow 950ms steps(1,start) infinite;
+					animation: person-slow 950ms steps(1,start) infinite;
+}
+
+.walk-pause {
+	animation-play-state: paused;
+}
+@keyframes person-slow {
+	0% {
+		background-position: 0 -291px;
+	}
+	25% {
+		background-position: -602px 0;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: 0 -291px;
+	}
+}
+@-webkit-keyframes person-slow {
+	0% {
+		background-position: -0px -291px;
+	}
+	25% {
+		background-position: -602px -0px;
+	}
+	50% {
+		background-position: -302px -291px;
+	}
+	75% {
+		background-position: -151px -291px;
+	}
+	100% {
+		background-position: -0px -291px;
+	}
+}
+
+
+/******************pageB*********/
+#secondScreen {
+	background-image: url('../images/QixiB-dark.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.b-bg {
+	display: none;
+	background: url('../images/QixiB-bright.png') no-repeat -9999px -9999px;
+}
+
+#secondScreen.lamp-bright {
+	background-image: url('../images/QixiB-bright.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.b-door {
+	width:13%;
+	height: 23.58%;
+	position: absolute;
+	top: 48.1%;
+	left: 52%;
+	overflow: hidden;
+}
+.door-left {
+	left: 0%;
+	background: url('../images/door-left.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+.door-right {
+	left: 50%;
+	background: url('../images/door-right.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+.door-left,.door-right {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.openLeft {
+	left: -50%;
+}
+.openRight {
+	left: 100%;
+}
+.walkWithFlower {
+	animation: flower-slow 950ms steps(1,start) infinite;
+	-webkit-animation: flower-slow 950ms steps(1,start) infinite;
+}
+.walk-pause {
+	animation-play-state: paused;
+}
+@keyframes flower-slow {
+	0% {
+		background-position: -301px 0px;
+	}
+	25% {
+		background-position: -904px 0;
+	}
+	50% {
+		background-position: -451px 0;
+	}
+	75% {
+		background-position: -754px 0;
+	}
+	100% {
+		background-position: -301px 0px;
+	}
+}
+@-webkit-keyframes flower-slow {
+	0% {
+		background-position: -301px 0px;
+	}
+	25% {
+		background-position: -904px 0;
+	}
+	50% {
+		background-position: -451px 0;
+	}
+	75% {
+		background-position: -754px 0;
+	}
+	100% {
+		background-position: -301px 0px;
+	}
+}
+.bird {
+	width: 91px;
+	height: 71px;
+	background: url('../images/bird.png');
+	background-position: 0 0;
+	z-index: 2;
+	position: absolute;
+	top: 20%;
+	left: 100%;
+	animation: bird-fly 950ms steps(1,start) infinite;
+	-webkit-animation: bird-fly 950ms steps(1,start) infinite;
+}
+@keyframes bird-fly {
+	0% {background-position: 0 0;}
+	50%{background-position: -91px 0;}
+	100%{background-position: -182px 0;}
+}
+@-webkit-keyframes bird-fly {
+	0% {background-position: 0 0;}
+	50%{background-position: -91px 0;}
+	100%{background-position: -182px 0;}
+}
+
+/******pagec*****/
+.c-bg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url('../images/QixiC.png');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+#girl {
+	width: 151px;
+	height: 291px;
+	position: absolute;
+	left: 50%;
+	top:25%;
+	background-image: url('../images/girl.png');
+	background-position: -151px 0;
+}
+.girl-turn {
+	animation: girlTurn 1s steps(1,start) forwards;
+	-webkit-animation: girlTurn 1s steps(1,start) forwards;
+}
+@keyframes girlTurn {
+	0% {background-position: -151px 0;}
+	25% {background-position: 0 0;}
+	50% {background-position: -302px 0;}
+	75% {background-position: -453px 0;}
+	100% {background-position: -604px 0;}
+}
+@-webkit-keyframes girlTurn {
+	0% {background-position: -151px 0;}
+	25% {background-position: 0 0;}
+	50% {background-position: -302px 0;}
+	75% {background-position: -453px 0;}
+	100% {background-position: -604px 0;}
+}
+
+.boy-turn {
+	animation: boyTurn 1s steps(1,start) forwards;
+	-webkit-animation: boyTurn 1s steps(1,start) forwards;
+}
+@keyframes boyTurn {
+	0% {background-position: -453px -291px;}
+	25% {background-position: -453px -291px;}
+	50% {background-position: -904px -291px;}
+	75% {background-position: -753px -291px;}
+	100% {background-position: -602px -291px;}
+}
+@-webkit-keyframes boyTurn {
+	0% {background-position: -151px -291px;}
+	25% {background-position: -453px -291px;}
+	50% {background-position: -904px -291px;}
+	75% {background-position: -753px -291px;}
+	100% {background-position: -602px -291px;}
+}
+
+/*闪烁的星星*/
+.stars {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 40%;
+}
+.star {
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	width: 20px;
+	height: 20px;
+	background: url('../images/stars.png') no-repeat center center;
+	background-size: cover;
+}
+@keyframes blingbling {
+	0% {transform: scale(0.8);}
+	50% {transform: scale(1.2);}
+	100% {transform: scale(0.8);}
+}
+@-webkit-keyframes blingbling {
+	0% {transform: scale(0.8);}
+	50% {transform: scale(1.2);}
+	100% {transform: scale(0.8);}
+}
+/*小桥流水*/
+.waters {
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 40%;
+	height: 20%;
+}
+.water {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	width: 140px;
+	height: 20px;
+	background:url('../images/water.png') no-repeat center center;
+	background-size: 100% 100%;
+	animation: s-water 2s linear infinite;
+}
+.water:nth-child(2) {
+	top: 70%;
+	left: 8%;
+	width: 220px;
+	height: 20px;
+	animation: b-water 4s linear infinite;
+}
+.water:nth-child(3) {
+	top: 45%;
+	left: 60%;
+	width: 140px;
+	height: 20px;
+	transform: rotate(180deg);
+}
+@keyframes s-water {
+	0% {width: 140px;}
+	50% {width: 180px;}
+	100% {width: 140px;}
+}
+@keyframes b-water {
+	0% {width: 220px;}
+	50% {width: 260px;}
+	100% {width: 220px;}
+}
+/*标语*/
+.slogan {
+	position: absolute;
+	right: -50%;
+	top: 0;
+	width: 50%;
+	height: 100px;
+}
+.slogan h2 {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 100px;
+	font-size: 32px;
+	color: #fff;
+}
+.icon {
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url('../images/bixin.svg') no-repeat left center;
+	background-size: 100%;
+}
+.slogan.in {
+	animation: sloganIn 3s ease-in forwards;
+	-webkit-animation: sloganIn 3s ease-in forwards;
+}
+@keyframes sloganIn {
+	0% {transform: rotate(0deg) scale(.8);}
+	50% {transform: rotate(360deg) scale(1.2);right: 30%;}
+	100% {transform: rotate(720deg) scale(1);right: 25%;}
+}
+@-webkit-keyframes sloganIn {
+	0% {transform: rotate(0deg) scale(.8);}
+	50% {transform: rotate(360deg) scale(1.2);right: 30%;}
+	100% {transform: rotate(720deg) scale(1);right: 25%;}
+}
+
+/*花瓣*/
+.snow {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 300;
+}
+

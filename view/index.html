@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>七夕快乐</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<div id="content">
+		<ul class="content-wrap">
+			<!-- 第一屏 -->
+			<li>
+				<div class="a-bg"></div>
+				<!-- 太阳 -->
+				<div class="sun"></div>
+				<!-- 云朵 -->
+				<div class="cloudArea">
+					<div class="cloud cloud1"></div>
+					<div class="cloud cloud2"></div>
+				</div>
+			</li>
+			<!-- 第二屏 -->
+			<li id="secondScreen">
+				<div class="b-bg">
+					<!-- 预加载亮灯背景图 -->
+				</div>
+				<div class="b-door">
+					<div class="door-left"></div>
+					<div class="door-right"></div>
+				</div>
+				
+				<div class="bird"></div>
+			</li>
+			<!-- 第三屏 -->
+			<li>
+				<div class="c-bg">
+					<!-- 流水 -->
+					<ul class="waters">
+						<li class="water"></li>
+						<li class="water"></li>
+						<li class="water"></li>
+					</ul>
+				</div>
+				<!-- 星星 -->
+				<ul class="stars">
+					<li class="star"></li>
+					<li class="star"></li>
+					<li class="star"></li>
+					<li class="star"></li>
+					<li class="star"></li>
+					<li class="star"></li>
+				</ul>
+				<!-- 女孩 -->
+				<div id="girl"></div>
+				<!-- 飘雪 -->
+				<div class="snow"></div>
+				<!-- 标语 -->
+				<div class="slogan">
+					<h2><span class="icon"></span>Love u forever</h2>
+				</div>
+			</li>
+		</ul>
+		<!-- 男孩 -->
+		<div id="boy" class="charector"></div>
+	</div>
+	<audio src="../music/happy.wav" class="audio"></audio>
+	<audio src="../music/circulation.wav" class="audio"></audio>
+	<script src="../js/scroll.js"></script>
+</body>
+</html>
