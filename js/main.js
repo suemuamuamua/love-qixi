@@ -163,7 +163,7 @@ function createSnow() {
 		top: -42+'px',
 		width: 42+'px',
 		height: 42+'px',
-		background: 'url(../images/snowflake/snowflake'+Math.round(Math.random()*5+1)+'.png) no-repeat center center',//6张图片随机生成
+		background: 'url(./images/snowflake/snowflake'+Math.round(Math.random()*5+1)+'.png) no-repeat center center',//6张图片随机生成
 		backgroundSize: 'cover',
 		opacity: Math.random()*0.5+0.4,
 		transitionProperty: 'all',
